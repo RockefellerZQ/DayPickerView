@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED08D9821B7DD49F00C1C277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D9811B7DD49F00C1C277 /* main.m */; };
+		ED08D9851B7DD49F00C1C277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D9841B7DD49F00C1C277 /* AppDelegate.m */; };
+		ED08D9881B7DD49F00C1C277 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D9871B7DD49F00C1C277 /* ViewController.m */; };
+		ED08D98B1B7DD49F00C1C277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED08D9891B7DD49F00C1C277 /* Main.storyboard */; };
+		ED08D98D1B7DD49F00C1C277 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED08D98C1B7DD49F00C1C277 /* Images.xcassets */; };
+		ED08D9901B7DD49F00C1C277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED08D98E1B7DD49F00C1C277 /* LaunchScreen.xib */; };
+		ED08D99C1B7DD4A000C1C277 /* DayPickerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D99B1B7DD4A000C1C277 /* DayPickerViewControllerTests.m */; };
+		ED08D9A81B7DDB9C00C1C277 /* ZQDayPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08D9A61B7DDB9C00C1C277 /* ZQDayPickerViewController.m */; };
+		ED08D9A91B7DDB9C00C1C277 /* ZQDayPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED08D9A71B7DDB9C00C1C277 /* ZQDayPickerViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED08D9961B7DD4A000C1C277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED08D9741B7DD49F00C1C277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED08D97B1B7DD49F00C1C277;
+			remoteInfo = DayPickerViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED08D97C1B7DD49F00C1C277 /* DayPickerViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayPickerViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED08D9801B7DD49F00C1C277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED08D9811B7DD49F00C1C277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED08D9831B7DD49F00C1C277 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED08D9841B7DD49F00C1C277 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED08D9861B7DD49F00C1C277 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED08D9871B7DD49F00C1C277 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED08D98A1B7DD49F00C1C277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED08D98C1B7DD49F00C1C277 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED08D98F1B7DD49F00C1C277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ED08D9951B7DD4A000C1C277 /* DayPickerViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DayPickerViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED08D99A1B7DD4A000C1C277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED08D99B1B7DD4A000C1C277 /* DayPickerViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayPickerViewControllerTests.m; sourceTree = "<group>"; };
+		ED08D9A51B7DDB9C00C1C277 /* ZQDayPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQDayPickerViewController.h; sourceTree = "<group>"; };
+		ED08D9A61B7DDB9C00C1C277 /* ZQDayPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQDayPickerViewController.m; sourceTree = "<group>"; };
+		ED08D9A71B7DDB9C00C1C277 /* ZQDayPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQDayPickerViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED08D9791B7DD49F00C1C277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED08D9921B7DD4A000C1C277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED08D9731B7DD49F00C1C277 = {
+			isa = PBXGroup;
+			children = (
+				ED08D97E1B7DD49F00C1C277 /* DayPickerViewController */,
+				ED08D9981B7DD4A000C1C277 /* DayPickerViewControllerTests */,
+				ED08D97D1B7DD49F00C1C277 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED08D97D1B7DD49F00C1C277 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED08D97C1B7DD49F00C1C277 /* DayPickerViewController.app */,
+				ED08D9951B7DD4A000C1C277 /* DayPickerViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED08D97E1B7DD49F00C1C277 /* DayPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED08D9831B7DD49F00C1C277 /* AppDelegate.h */,
+				ED08D9841B7DD49F00C1C277 /* AppDelegate.m */,
+				ED08D9861B7DD49F00C1C277 /* ViewController.h */,
+				ED08D9871B7DD49F00C1C277 /* ViewController.m */,
+				ED08D9A51B7DDB9C00C1C277 /* ZQDayPickerViewController.h */,
+				ED08D9A61B7DDB9C00C1C277 /* ZQDayPickerViewController.m */,
+				ED08D9A71B7DDB9C00C1C277 /* ZQDayPickerViewController.xib */,
+				ED08D9891B7DD49F00C1C277 /* Main.storyboard */,
+				ED08D98C1B7DD49F00C1C277 /* Images.xcassets */,
+				ED08D98E1B7DD49F00C1C277 /* LaunchScreen.xib */,
+				ED08D97F1B7DD49F00C1C277 /* Supporting Files */,
+			);
+			path = DayPickerViewController;
+			sourceTree = "<group>";
+		};
+		ED08D97F1B7DD49F00C1C277 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED08D9801B7DD49F00C1C277 /* Info.plist */,
+				ED08D9811B7DD49F00C1C277 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED08D9981B7DD4A000C1C277 /* DayPickerViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED08D99B1B7DD4A000C1C277 /* DayPickerViewControllerTests.m */,
+				ED08D9991B7DD4A000C1C277 /* Supporting Files */,
+			);
+			path = DayPickerViewControllerTests;
+			sourceTree = "<group>";
+		};
+		ED08D9991B7DD4A000C1C277 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED08D99A1B7DD4A000C1C277 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED08D97B1B7DD49F00C1C277 /* DayPickerViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED08D99F1B7DD4A000C1C277 /* Build configuration list for PBXNativeTarget "DayPickerViewController" */;
+			buildPhases = (
+				ED08D9781B7DD49F00C1C277 /* Sources */,
+				ED08D9791B7DD49F00C1C277 /* Frameworks */,
+				ED08D97A1B7DD49F00C1C277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DayPickerViewController;
+			productName = DayPickerViewController;
+			productReference = ED08D97C1B7DD49F00C1C277 /* DayPickerViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED08D9941B7DD4A000C1C277 /* DayPickerViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED08D9A21B7DD4A000C1C277 /* Build configuration list for PBXNativeTarget "DayPickerViewControllerTests" */;
+			buildPhases = (
+				ED08D9911B7DD4A000C1C277 /* Sources */,
+				ED08D9921B7DD4A000C1C277 /* Frameworks */,
+				ED08D9931B7DD4A000C1C277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED08D9971B7DD4A000C1C277 /* PBXTargetDependency */,
+			);
+			name = DayPickerViewControllerTests;
+			productName = DayPickerViewControllerTests;
+			productReference = ED08D9951B7DD4A000C1C277 /* DayPickerViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED08D9741B7DD49F00C1C277 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = aoliday;
+				TargetAttributes = {
+					ED08D97B1B7DD49F00C1C277 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					ED08D9941B7DD4A000C1C277 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = ED08D97B1B7DD49F00C1C277;
+					};
+				};
+			};
+			buildConfigurationList = ED08D9771B7DD49F00C1C277 /* Build configuration list for PBXProject "DayPickerViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED08D9731B7DD49F00C1C277;
+			productRefGroup = ED08D97D1B7DD49F00C1C277 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED08D97B1B7DD49F00C1C277 /* DayPickerViewController */,
+				ED08D9941B7DD4A000C1C277 /* DayPickerViewControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED08D97A1B7DD49F00C1C277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED08D9A91B7DDB9C00C1C277 /* ZQDayPickerViewController.xib in Resources */,
+				ED08D98B1B7DD49F00C1C277 /* Main.storyboard in Resources */,
+				ED08D9901B7DD49F00C1C277 /* LaunchScreen.xib in Resources */,
+				ED08D98D1B7DD49F00C1C277 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED08D9931B7DD4A000C1C277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED08D9781B7DD49F00C1C277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED08D9A81B7DDB9C00C1C277 /* ZQDayPickerViewController.m in Sources */,
+				ED08D9881B7DD49F00C1C277 /* ViewController.m in Sources */,
+				ED08D9851B7DD49F00C1C277 /* AppDelegate.m in Sources */,
+				ED08D9821B7DD49F00C1C277 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED08D9911B7DD4A000C1C277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED08D99C1B7DD4A000C1C277 /* DayPickerViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED08D9971B7DD4A000C1C277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED08D97B1B7DD49F00C1C277 /* DayPickerViewController */;
+			targetProxy = ED08D9961B7DD4A000C1C277 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED08D9891B7DD49F00C1C277 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED08D98A1B7DD49F00C1C277 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED08D98E1B7DD49F00C1C277 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED08D98F1B7DD49F00C1C277 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED08D99D1B7DD4A000C1C277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED08D99E1B7DD4A000C1C277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED08D9A01B7DD4A000C1C277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DayPickerViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		ED08D9A11B7DD4A000C1C277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DayPickerViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		ED08D9A31B7DD4A000C1C277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DayPickerViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DayPickerViewController.app/DayPickerViewController";
+			};
+			name = Debug;
+		};
+		ED08D9A41B7DD4A000C1C277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DayPickerViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DayPickerViewController.app/DayPickerViewController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED08D9771B7DD49F00C1C277 /* Build configuration list for PBXProject "DayPickerViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED08D99D1B7DD4A000C1C277 /* Debug */,
+				ED08D99E1B7DD4A000C1C277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED08D99F1B7DD4A000C1C277 /* Build configuration list for PBXNativeTarget "DayPickerViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED08D9A01B7DD4A000C1C277 /* Debug */,
+				ED08D9A11B7DD4A000C1C277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED08D9A21B7DD4A000C1C277 /* Build configuration list for PBXNativeTarget "DayPickerViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED08D9A31B7DD4A000C1C277 /* Debug */,
+				ED08D9A41B7DD4A000C1C277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED08D9741B7DD49F00C1C277 /* Project object */;
+}
