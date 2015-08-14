@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import "ZQDayPickerViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <ZQDayPickerViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -23,7 +24,21 @@
 - (IBAction)buttonPressed:(UIButton *)sender {
     ZQDayPickerViewController *dayPickerViewController = [[ZQDayPickerViewController alloc] initWithNibName:NSStringFromClass([ZQDayPickerViewController class]) bundle:nil];
     dayPickerViewController.selectedColor = [UIColor orangeColor];
+    dayPickerViewController.hintTitle = @"选取时间";
+    dayPickerViewController.delegate = self;
     [self presentViewController:dayPickerViewController animated:NO completion:nil];
+}
+
+- (void)dayPickerViewControllerChoosedDate:(ZQDayPickerViewController *)dayPickerViewController
+{
+    _textField.text = [self dateStringFromDate:dayPickerViewController.date];
+}
+
+- (NSString *)dateStringFromDate:(NSDate *)date
+{
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy年MM月dd日 HH:mm";
+    return [formatter stringFromDate:date];
 }
 
 - (void)didReceiveMemoryWarning {

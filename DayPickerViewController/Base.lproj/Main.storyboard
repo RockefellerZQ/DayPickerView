@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,23 +24,35 @@
                                     <constraint firstAttribute="height" constant="30" id="Szo-sF-ZVY"/>
                                     <constraint firstAttribute="width" constant="104" id="WsB-xr-UVv"/>
                                 </constraints>
-                                <state key="normal" title="Press">
+                                <state key="normal" title="Choose">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l8X-rR-viK"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-qq-pgX">
-                                <rect key="frame" x="0.0" y="443" width="600" height="162"/>
-                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-un-FWD">
+                                <rect key="frame" x="200" y="238" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PFe-IB-sHk"/>
+                                    <constraint firstAttribute="width" constant="200" id="cqz-qf-bfF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ehC-jU-znO" secondAttribute="centerX" id="7If-ZC-Zad"/>
+                            <constraint firstItem="ehC-jU-znO" firstAttribute="top" secondItem="hdL-un-FWD" secondAttribute="bottom" constant="17" id="KHR-Qx-SU9"/>
+                            <constraint firstAttribute="centerX" secondItem="hdL-un-FWD" secondAttribute="centerX" id="TRy-Jl-YHI"/>
                             <constraint firstAttribute="centerY" secondItem="ehC-jU-znO" secondAttribute="centerY" id="n8M-lS-oMc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="hdL-un-FWD" id="6e6-xi-uKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

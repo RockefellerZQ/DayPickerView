@@ -19,10 +19,11 @@
  */
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 
 /**
- *  *************************** UI 分割线 **************************
+ *  *****************************************************
  */
 
 /**
@@ -39,7 +40,6 @@
 @property (nonatomic, assign) NSInteger currentDay;
 @property (nonatomic, assign) NSInteger currentHour;
 @property (nonatomic, assign) NSInteger currentMinute;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @end
 
@@ -76,6 +76,7 @@
     _dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
     _dateFormatter.dateFormat = @"MM月dd日 EE";
     _selectedColor = [UIColor darkTextColor];
+    _numberOfDays = 30;
     [self initComponentsWithDate:_date];
 }
 
@@ -117,10 +118,10 @@
 #pragma mark Picker View Delegate
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    int rows = 0;
+    NSInteger rows = 0;
     switch (component) {
         case 0:
-            rows = 100;
+            rows = _numberOfDays;
             break;
         case 1:
             rows = 24;
@@ -139,22 +140,6 @@
 {
     return 3;
 }
-
-//- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-//{
-//    NSString *showString = nil;
-//    if (component == 1 || component == 2)
-//    {
-//        showString = [NSString stringWithFormat:@"%li", row];
-//    }
-//    if (component == 0)
-//    {
-//        NSInteger day = _currentDay + row;
-//        _dateComponents.day = day;
-//        showString = [self getDayShowStringFromDateComponents:_dateComponents];
-//    }
-//    return showString;
-//}
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
@@ -242,27 +227,41 @@
     }];
 }
 
-- (void)hiddenDayPickerAnimate
+- (void)hiddenDayPickerAnimateWithComplectionBlock:(void(^)(void))complectionBlock
 {
     _bottomConstraint.constant = -_contentView.frame.size.height;
     [UIView animateWithDuration:0.5 animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-        if (finished)
+        if (complectionBlock)
         {
-            [self dismissViewControllerAnimated:NO completion:nil];
+            complectionBlock();
         }
+        [self dismissViewControllerAnimated:NO completion:nil];
     }];
 }
 
 - (IBAction)cancleButtonPressed:(id)sender {
-    [self hiddenDayPickerAnimate];
+    __weak typeof(self) weakSelf = self;
+    [weakSelf hiddenDayPickerAnimateWithComplectionBlock:^{
+        if (_delegate && [_delegate respondsToSelector:@selector(dayPickerViewControllerCancled:)])
+        {
+            [_delegate dayPickerViewControllerCancled:weakSelf];
+        }
+    }];
 }
 
 - (IBAction)sureButtonPressed:(id)sender {
     _dateComponents.day = _currentDay;
     _dateComponents.hour = _currentHour;
     _dateComponents.minute = _currentMinute;
+    _date = [_currenCalendar dateFromComponents:_dateComponents];
+    __weak typeof(self) weakSelf = self;
+    [weakSelf hiddenDayPickerAnimateWithComplectionBlock:^{
+        if (_delegate && [_delegate respondsToSelector:@selector(dayPickerViewControllerChoosedDate:)]) {
+            [_delegate dayPickerViewControllerChoosedDate:weakSelf];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZQDayPickerViewController;
+@protocol ZQDayPickerViewControllerDelegate <NSObject>
+
+@optional
+- (void)dayPickerViewControllerCancled:(ZQDayPickerViewController *)dayPickerViewController;
+- (void)dayPickerViewControllerChoosedDate:(ZQDayPickerViewController *)dayPickerViewController;
+
+@end
+
 @interface ZQDayPickerViewController : UIViewController
 
 /**
@@ -24,5 +33,12 @@
  *  选中时间后，文本的颜色 默认darkTextColor
  */
 @property (nonatomic) UIColor *selectedColor;
+
+/**
+ *  从设置date开始需要显示的天数
+ */
+@property (nonatomic, assign) NSInteger numberOfDays;
+
+@property (nonatomic, weak) id <ZQDayPickerViewControllerDelegate>delegate;
 
 @end
