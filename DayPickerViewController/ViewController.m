@@ -26,7 +26,7 @@
     dayPickerViewController.selectedColor = [UIColor orangeColor];
     dayPickerViewController.hintTitle = @"选取时间";
     dayPickerViewController.delegate = self;
-    [self presentViewController:dayPickerViewController animated:NO completion:nil];
+    [self presentViewController:dayPickerViewController animated:YES completion:nil];
 }
 
 - (void)dayPickerViewControllerChoosedDate:(ZQDayPickerViewController *)dayPickerViewController

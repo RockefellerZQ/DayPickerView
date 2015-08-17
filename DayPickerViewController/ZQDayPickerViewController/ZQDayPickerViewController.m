@@ -7,8 +7,9 @@
 //
 
 #import "ZQDayPickerViewController.h"
+#import "ZQPresentTransition.h"
 
-@interface ZQDayPickerViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ZQDayPickerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UIViewControllerTransitioningDelegate, UIGestureRecognizerDelegate>
 /**
  *  提示文本框的label
  */
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (nonatomic) ZQPresentTransition *presentTransition;
 
 
 /**
@@ -77,7 +79,18 @@
     _dateFormatter.dateFormat = @"MM月dd日 EE";
     _selectedColor = [UIColor darkTextColor];
     _numberOfDays = 30;
+    _presentTransition = [ZQPresentTransition new];
+    _presentTransition.animationDuration = 0;
+    self.transitioningDelegate = self;
     [self initComponentsWithDate:_date];
+}
+
+- (void)createTapGesture
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancleButtonPressed:)];
+    tapGesture.delegate = self;
+    [self.view addGestureRecognizer:tapGesture];
+    tapGesture = nil;
 }
 
 - (void)initComponentsWithDate:(NSDate *)date
@@ -103,7 +116,15 @@
     _pickerView.dataSource = self;
     [_pickerView selectRow:_currentHour inComponent:1 animated:NO];
     [_pickerView selectRow:_currentMinute inComponent:2 animated:NO];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.5];
+    [self createTapGesture];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source;
+
+{
+    return _presentTransition;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -176,7 +197,6 @@
 {
     UILabel *label = (UILabel *)[pickerView viewForRow:row forComponent:component];
     label.textColor = _selectedColor;
-    
     if (component == 0)
     {
         _currentDay = tempSelectedDay + row;
@@ -212,6 +232,7 @@
     }
 }
 
+#pragma custom method
 // 获取当前日期的字符串
 - (NSString *)getDayShowStringFromDateComponents:(NSDateComponents *)dateComponents
 {
@@ -222,7 +243,7 @@
 - (void)showDayPickerAnimate
 {
     _bottomConstraint.constant = 0.0;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];
     }];
 }
@@ -230,7 +251,7 @@
 - (void)hiddenDayPickerAnimateWithComplectionBlock:(void(^)(void))complectionBlock
 {
     _bottomConstraint.constant = -_contentView.frame.size.height;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (complectionBlock)
@@ -262,6 +283,18 @@
             [_delegate dayPickerViewControllerChoosedDate:weakSelf];
         }
     }];
+}
+
+#pragma mark gesture delegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.view];
+    touchPoint = [self.view convertPoint:touchPoint toView:_contentView];
+    if (CGRectContainsPoint(_contentView.bounds, touchPoint))
+    {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
