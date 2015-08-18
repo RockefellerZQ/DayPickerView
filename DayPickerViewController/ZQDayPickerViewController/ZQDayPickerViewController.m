@@ -51,15 +51,6 @@
     NSInteger tempSelectedDay;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self initializeValues];
-    }
-    return self;
-}
-
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
