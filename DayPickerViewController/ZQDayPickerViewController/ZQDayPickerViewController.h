@@ -39,6 +39,11 @@
  */
 @property (nonatomic, assign) NSInteger numberOfDays;
 
+/**
+ *  时区设置 默认 systemTimeZone
+ */
+@property (nonatomic) NSTimeZone *timeZone;
+
 @property (nonatomic, weak) id <ZQDayPickerViewControllerDelegate>delegate;
 
 @end

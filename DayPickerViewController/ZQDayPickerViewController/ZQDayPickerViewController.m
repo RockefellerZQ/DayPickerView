@@ -64,6 +64,7 @@
 {
     _hintTitle = nil;
     _date = [NSDate date];
+    _timeZone = [NSTimeZone systemTimeZone];
     _currenCalendar = [NSCalendar currentCalendar];
     _dateFormatter = [[NSDateFormatter alloc] init];
     _dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
@@ -86,10 +87,20 @@
 
 - (void)initComponentsWithDate:(NSDate *)date
 {
+    _currenCalendar.timeZone = _timeZone;
     _dateComponents = [_currenCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:date];
     _currentDay = tempSelectedDay = _dateComponents.day;
     _currentHour = _dateComponents.hour;
     _currentMinute = _dateComponents.minute;
+}
+
+- (void)setTimeZone:(NSTimeZone *)timeZone
+{
+    if (_timeZone != timeZone)
+    {
+        _timeZone = timeZone;
+        [self initComponentsWithDate:_date];
+    }
 }
 
 - (void)setDate:(NSDate *)date
